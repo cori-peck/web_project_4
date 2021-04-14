@@ -1,0 +1,6 @@
+.card__tab {
+  width: 87%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
