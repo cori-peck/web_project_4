@@ -1,0 +1,10 @@
+.profile__info {
+  width: 47.2%;
+  display: grid;
+  grid-template-columns: 90% 6%;
+  grid-template-rows: 2.44em;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  align-self: center;
+  padding-right: 9em;
+}
