@@ -1,0 +1,16 @@
+.form__text-input {
+  border: none;
+  border-bottom: 1px solid;
+  border-bottom-color: rgb(0, 0, 0, 0.2);
+  width: 83%;
+  font-size: 0.875em;
+  line-height: 1.05em;
+  margin-bottom: 1.86em;
+  height: 1.51em;
+}
+
+.form__text-input:focus {
+  border: none;
+  border-bottom: 1px solid;
+  border-bottom-color: rgb(0, 0, 0, 0.2);
+}
