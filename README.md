@@ -2,15 +2,22 @@
 
 ### Overview
 
-* Figma
-* Images
+- Figma
+- Live link
+- Development Tools
 
 **Figma**
 
-* [Link to the project in Figma](https://www.figma.com/file/SurN1jaeEQIhuZEDMhmWWf/Sprint-4-Around-The-U.S.-desktop-mobile?node-id=0%3A1)
+- [Link to the project in Figma](https://www.figma.com/file/SurN1jaeEQIhuZEDMhmWWf/Sprint-4-Around-The-U.S.-desktop-mobile?node-id=0%3A1)
 
-**Images**
+**Live link**
 
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
+Check out the live page here:
 
-Have fun with JavaScript!
+**Development Tools**
+
+- HTML5
+- CSS3
+- Javascript
+- CSS Flexbox
+- CSS Grid
