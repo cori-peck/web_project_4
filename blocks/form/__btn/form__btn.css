@@ -10,6 +10,7 @@
   border-radius: 2px;
   border: none;
   cursor: pointer;
+  margin-top: 1.5em;
 }
 
 .form__btn:hover {

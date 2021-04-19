@@ -1,0 +1,13 @@
+.form__close-btn {
+  border: none;
+  background: none;
+  position: absolute;
+  top: -17%;
+  left: 97%;
+  cursor: pointer;
+}
+
+.form__close-btn:hover {
+  opacity: 0.6;
+  transition: 0.3s;
+}

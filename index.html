@@ -19,7 +19,7 @@
         </div>
         <div class="profile__info">
           <h1 class="profile__name">Jacques Cousteau</h1>
-          <button class="profile__edit-button">
+          <button class="profile__edit-button" onclick="openPopup()">
             <img
               class="profile__edit-icon"
               src="/images/edit-icon.png"
@@ -36,6 +36,36 @@
           />
         </button>
       </section>
+
+      <div class="popup">
+        <form class="form" name="editForm">
+          <button class="form__close-btn" onnclick="closePopup()">
+            <img
+              class="close-icon"
+              src="./images/close-icon.png"
+              alt="close button"
+            />
+          </button>
+          <h1 class="form__title">Edit Profile</h1>
+          <input
+            class="form__text-input"
+            id="fullName"
+            type="text"
+            name="full-name"
+            placeholder="Name"
+          />
+          <input
+            class="form__text-input"
+            id="job"
+            type="text"
+            name="occupation"
+            placeholder="About me"
+          />
+          <button class="form__btn" type="submit" onclick="updateText()">
+            Save
+          </button>
+        </form>
+      </div>
 
       <section class="cards">
         <div class="card">
