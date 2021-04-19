@@ -12,7 +12,7 @@
 
 **Live link**
 
-Check out the live page here:
+Check out the live page here: https://cori-peck.github.io/web_project_4/
 
 **Development Tools**
 
