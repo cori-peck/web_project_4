@@ -3,4 +3,35 @@
   line-height: 1.36em;
   font-weight: 400;
   margin: 0;
+  width: 92%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .profile__occupation {
+    width: 88%;
+    align-self: center;
+    text-align: center;
+    padding-top: 0.875em;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 767px) {
+  .profile__occupation {
+    width: 88%;
+    align-self: center;
+    text-align: center;
+    padding-top: 0.875em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .profile__occupation {
+    padding-left: 33px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .content {
+    max-width: 1279px;
+  }
 }

@@ -3,5 +3,33 @@
   padding-top: 2.5em;
   margin: 0 auto;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .profile {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 767px) {
+  .profile {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .profile {
+    width: 88%;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .profile {
+    width: 75%;
+  }
 }
