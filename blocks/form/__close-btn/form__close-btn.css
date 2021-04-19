@@ -20,7 +20,8 @@
 }
 
 @media screen and (min-width: 426px) and (max-width: 767px) {
-  .content {
-    max-width: 767px;
+  .form__close-btn {
+    top: -21%;
+    left: 80%;
   }
 }
