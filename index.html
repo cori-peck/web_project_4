@@ -8,9 +8,9 @@
     <title>Around The U.S.</title>
   </head>
   <body class="page">
-    <div class="content">
+    <main class="content">
       <header class="header">
-        <img class="logo" src="images/logo.png" alt="project logo" />
+        <img class="logo" src="./images/logo.svg" alt="project logo" />
       </header>
 
       <section class="profile">
@@ -19,10 +19,10 @@
         </div>
         <div class="profile__info">
           <h1 class="profile__name">Jacques Cousteau</h1>
-          <button class="profile__edit-button" onclick="openPopup()">
+          <button class="profile__edit-button">
             <img
               class="profile__edit-icon"
-              src="/images/edit-icon.png"
+              src="./images/edit-icon.svg"
               alt="edit button icon"
             />
           </button>
@@ -31,22 +31,23 @@
         <button class="profile__add-button">
           <img
             class="profile__add-icon"
-            src="/images/add-icon.png"
+            src="./images/add-icon.svg"
             alt="add button"
           />
         </button>
       </section>
 
+      <!--Your comment was a div was needed that represents a popup that would then contan the popup elements including a form. Is that not what I already have? I have a div with className popup and it wraps my form which contains my inputs and button?-->
       <div class="popup">
         <form class="form" name="editForm">
-          <button class="form__close-btn" onnclick="closePopup()">
+          <button class="form__close-btn">
             <img
               class="close-icon"
-              src="./images/close-icon.png"
+              src="./images/close-icon.svg"
               alt="close button"
             />
           </button>
-          <h1 class="form__title">Edit Profile</h1>
+          <h2 class="form__title">Edit Profile</h2>
           <input
             class="form__text-input"
             id="fullName"
@@ -61,18 +62,16 @@
             name="occupation"
             placeholder="About me"
           />
-          <button class="form__btn" type="submit" onclick="updateText()">
-            Save
-          </button>
+          <button class="form__btn" type="submit">Save</button>
         </form>
       </div>
 
-      <section>
+      <section class="cards__list">
         <ul class="cards">
           <li class="card">
             <img
               class="card__image"
-              src="/images/yosemite.png"
+              src="./images/yosemite.png"
               alt="Yosemite"
             />
             <div class="card__tab">
@@ -80,7 +79,7 @@
               <button class="card__like-btn">
                 <img
                   class="card__like-icon"
-                  src="images/like-icon.png"
+                  src="images/like-icon.svg"
                   alt="like button"
                 />
               </button>
@@ -89,7 +88,7 @@
           <li class="card">
             <img
               class="card__image"
-              src="/images/lake-louise.png"
+              src="./images/lake-louise.png"
               alt="Lake Louise"
             />
             <div class="card__tab">
@@ -97,7 +96,7 @@
               <button class="card__like-btn">
                 <img
                   class="card__like-icon"
-                  src="images/like-icon.png"
+                  src="images/like-icon.svg"
                   alt="like button"
                 />
               </button>
@@ -106,7 +105,7 @@
           <li class="card">
             <img
               class="card__image"
-              src="/images/bald-mountains.png"
+              src="./images/bald-mountains.png"
               alt="Bald Mountains"
             />
             <div class="card__tab">
@@ -114,20 +113,20 @@
               <button class="card__like-btn">
                 <img
                   class="card__like-icon"
-                  src="images/like-icon.png"
+                  src="images/like-icon.svg"
                   alt="like button"
                 />
               </button>
             </div>
           </li>
           <li class="card">
-            <img class="card__image" src="/images/latemar.png" alt="Latemar" />
+            <img class="card__image" src="./images/latemar.png" alt="Latmar" />
             <div class="card__tab">
               <h2 class="card__title">Latmar</h2>
               <button class="card__like-btn">
                 <img
                   class="card__like-icon"
-                  src="images/like-icon.png"
+                  src="images/like-icon.svg"
                   alt="like button"
                 />
               </button>
@@ -136,7 +135,7 @@
           <li class="card">
             <img
               class="card__image"
-              src="/images/vanoise.png"
+              src="./images/vanoise.png"
               alt="Vanoise National Park"
             />
             <div class="card__tab">
@@ -144,7 +143,7 @@
               <button class="card__like-btn">
                 <img
                   class="card__like-icon"
-                  src="images/like-icon.png"
+                  src="images/like-icon.svg"
                   alt="like button"
                 />
               </button>
@@ -153,7 +152,7 @@
           <li class="card">
             <img
               class="card__image"
-              src="/images/lago-di-braies.png"
+              src="./images/lago-di-braies.png"
               alt="Lago di Braies"
             />
             <div class="card__tab">
@@ -161,7 +160,7 @@
               <button class="card__like-btn">
                 <img
                   class="card__like-icon"
-                  src="images/like-icon.png"
+                  src="images/like-icon.svg"
                   alt="like button"
                 />
               </button>
@@ -170,11 +169,11 @@
         </ul>
       </section>
 
-      <section class="footer">
+      <footer class="footer">
         <p class="footer__copyright">&copy; 2021 Around The U.S.</p>
-      </section>
-    </div>
+      </footer>
+    </main>
 
-    <script src="pages/index.js"></script>
+    <script src="script/index.js"></script>
   </body>
 </html>

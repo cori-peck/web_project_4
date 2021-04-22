@@ -9,29 +9,5 @@
   height: 100vh;
   transform: scale(1.1);
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-  padding: 50vh 20vh;
-}
-
-@media screen and (min-width: 320px) and (max-width: 425px) {
-  .popup {
-    padding: 50vh 18vh;
-  }
-}
-
-@media screen and (min-width: 426px) and (max-width: 767px) {
-  .popup {
-    padding: 50vh 18vh;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .popup {
-    padding: 50vh 20vh;
-  }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1279px) {
-  .popup {
-    padding: 50vh 20vh;
-  }
+  padding: 30vh 0vh;
 }

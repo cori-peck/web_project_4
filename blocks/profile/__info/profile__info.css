@@ -5,20 +5,9 @@
   flex-wrap: wrap;
 }
 
-@media screen and (min-width: 320px) and (max-width: 425px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .profile__info {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-  }
-}
-
-@media screen and (min-width: 426px) and (max-width: 767px) {
-  .profile__info {
-    width: 100%;
-    display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
