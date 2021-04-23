@@ -1,0 +1,5 @@
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .form__close-icon {
+    width: 65%;
+  }
+}
