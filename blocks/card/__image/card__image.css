@@ -2,4 +2,5 @@
   object-fit: cover;
   max-width: 100%;
   width: 17.625em;
+  border-radius: 10px 10px 0 0;
 }

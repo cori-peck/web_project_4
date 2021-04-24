@@ -2,9 +2,10 @@
   border: none;
   background: none;
   position: absolute;
-  top: 14%;
-  left: 61%;
+  top: 175px;
+  left: 67%;
   cursor: pointer;
+  padding: 0;
 }
 
 .form__close-btn:hover {
@@ -14,21 +15,7 @@
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .form__close-btn {
-    top: 12%;
-    left: 80%;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .form__close-btn {
-    top: 15%;
-    left: 70%;
-  }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1279px) {
-  .form__close-btn {
-    top: 16%;
-    left: 67%;
+    top: 91px;
+    left: 82%;
   }
 }

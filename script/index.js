@@ -12,14 +12,13 @@ function openPopup() {
   popup.classList.add("popup_status_opened");
 }
 
-function updateText() {
+function updateText(event) {
   event.preventDefault();
   let newName = document.querySelector("#fullName").value;
   let newJob = document.querySelector("#job").value;
 
   document.querySelector(".profile__name").textContent = newName;
   document.querySelector(".profile__occupation").textContent = newJob;
-  event.preventDefault();
   closePopup();
 }
 

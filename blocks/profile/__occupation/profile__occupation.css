@@ -9,6 +9,8 @@
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .profile__occupation {
     width: 88%;
+    font-size: 0.875em;
+    line-height: 1.06em;
     align-self: center;
     text-align: center;
     padding-top: 0.875em;
