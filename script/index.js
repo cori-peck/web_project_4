@@ -1,7 +1,7 @@
 const popup = document.querySelector(".popup");
 const popupBtn = document.querySelector(".profile__edit-button");
 const form = document.querySelector(".form");
-const formBtn = document.querySelector(".form__close-btn");
+const formBtn = document.querySelector(".popup__close-btn");
 let currentName = document.querySelector(".profile__name").textContent;
 let currentJob = document.querySelector(".profile__occupation").textContent;
 
