@@ -19,3 +19,9 @@
     margin-top: 2.25em;
   }
 }
+
+@media screen and (min-width: 767px) and (max-width: 845px) {
+  .profile__add-button {
+    width: 10.6em;
+  }
+}

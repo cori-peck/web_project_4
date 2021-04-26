@@ -2,11 +2,12 @@
   border: none;
   border-bottom: 1px solid;
   border-bottom-color: rgb(0, 0, 0, 0.2);
-  width: 83%;
+  width: 100%;
   font-size: 0.875em;
   line-height: 1.05em;
   margin-bottom: 1.86em;
   height: 1.51em;
+  padding-bottom: 0.828em;
 }
 
 .form__text-input:focus {
@@ -15,7 +16,7 @@
   border-bottom-color: rgb(0, 0, 0, 0.2);
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 425px) {
   .form__text-input {
     width: 95%;
   }

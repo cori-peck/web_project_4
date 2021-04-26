@@ -8,16 +8,11 @@
   grid-template-columns: repeat(auto-fit, minmax(17.625em, 1fr));
   grid-column-gap: 1.06em;
   grid-row-gap: 1.31em;
+  justify-items: center;
 }
 
 @media screen and (min-width: 320px) and (max-width: 1023px) {
   .cards__list {
     width: 88%;
-  }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1279px) {
-  .cards__list {
-    width: 75%;
   }
 }
