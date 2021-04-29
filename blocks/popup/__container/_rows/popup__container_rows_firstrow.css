@@ -1,0 +1,10 @@
+.popup__container_rows_firstrow {
+  grid-area: firstrow;
+  grid-column: 3 / -1;
+}
+
+@media screen and (min-width: 320px) and (max-width: 676px) {
+  .popup__container_rows_firstrow {
+    grid-column: 2 / -1;
+  }
+}

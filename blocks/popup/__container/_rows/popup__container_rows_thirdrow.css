@@ -1,0 +1,4 @@
+.popup__container_rows_thirdrow {
+  grid-area: thirdrow;
+  grid-column: 1 / 1;
+}
