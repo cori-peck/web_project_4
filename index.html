@@ -63,110 +63,7 @@
         </div>
 
         <section class="cards">
-          <ul class="cards__list">
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/yosemite.png"
-                alt="Yosemite"
-              />
-              <div class="card__tab">
-                <h2 class="card__title">Yosemite Valley</h2>
-                <button class="card__like-btn" type="button">
-                  <img
-                    class="card__like-icon"
-                    src="images/like-icon.svg"
-                    alt="like button"
-                  />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/lake-louise.png"
-                alt="Lake Louise"
-              />
-              <div class="card__tab">
-                <h2 class="card__title">Lake Louise</h2>
-                <button class="card__like-btn" type="button">
-                  <img
-                    class="card__like-icon"
-                    src="images/like-icon.svg"
-                    alt="like button"
-                  />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/bald-mountains.png"
-                alt="Bald Mountains"
-              />
-              <div class="card__tab">
-                <h2 class="card__title">Bald Mountains</h2>
-                <button class="card__like-btn" type="button">
-                  <img
-                    class="card__like-icon"
-                    src="images/like-icon.svg"
-                    alt="like button"
-                  />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/latemar.png"
-                alt="Latmar"
-              />
-              <div class="card__tab">
-                <h2 class="card__title">Latmar</h2>
-                <button class="card__like-btn" type="button">
-                  <img
-                    class="card__like-icon"
-                    src="images/like-icon.svg"
-                    alt="like button"
-                  />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/vanoise.png"
-                alt="Vanoise National Park"
-              />
-              <div class="card__tab">
-                <h2 class="card__title">Vanoise National Park</h2>
-                <button class="card__like-btn" type="button">
-                  <img
-                    class="card__like-icon"
-                    src="images/like-icon.svg"
-                    alt="like button"
-                  />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/lago-di-braies.png"
-                alt="Lago di Braies"
-              />
-              <div class="card__tab">
-                <h2 class="card__title">Lago di Braies</h2>
-                <button class="card__like-btn" type="button">
-                  <img
-                    class="card__like-icon"
-                    src="images/like-icon.svg"
-                    alt="like button"
-                  />
-                </button>
-              </div>
-            </li>
-          </ul>
+          <ul class="cards__list"></ul>
         </section>
       </main>
 
@@ -174,6 +71,22 @@
         <p class="footer__copyright">&copy; 2021 Around The U.S.</p>
       </footer>
     </div>
+
+    <template id="card-template">
+      <li class="card">
+        <img class="card__image" src="" alt="" />
+        <div class="card__tab">
+          <h2 class="card__title"></h2>
+          <button class="card__like-btn" type="button">
+            <img
+              class="card__like-icon"
+              src="images/like-icon.svg"
+              alt="like button"
+            />
+          </button>
+        </div>
+      </li>
+    </template>
 
     <script src="script/index.js"></script>
   </body>
