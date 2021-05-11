@@ -1,6 +1,9 @@
 const cardsContainer = document.querySelector(".cards__list");
 const popup = document.querySelector(".popup");
 const popupBtn = document.querySelector(".profile__edit-button");
+const addPopup = document.querySelector(".add-popup");
+const addBtn = document.querySelector(".profile__add-button");
+const closeAdd = document.querySelector(".add-popup__close-btn");
 const form = document.querySelector(".form");
 const formBtn = document.querySelector(".popup__close-btn");
 let currentName = document.querySelector(".profile__name").textContent;
@@ -67,6 +70,16 @@ function closePopup() {
   popup.classList.remove("popup_status_opened");
 }
 
+function openAddCard() {
+  addPopup.classList.add("add-popup_status_opened");
+}
+
+function closeAddCard() {
+  addPopup.classList.remove("add-popup_status_opened");
+}
+
 popupBtn.addEventListener("click", openPopup);
+addBtn.addEventListener("click", openAddCard);
+closeAdd.addEventListener("click", closeAddCard);
 form.addEventListener("submit", updateText);
 formBtn.addEventListener("click", closePopup);
