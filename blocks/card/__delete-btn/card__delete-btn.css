@@ -1,0 +1,19 @@
+.card__delete-btn {
+  display: flex;
+  flex-direction: column;
+  width: 1.125em;
+  height: 1.21em;
+  margin: 0;
+  background: url("../../../images/delete-icon.svg") no-repeat center center;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  position: absolute;
+  top: 1.487em;
+  right: 1.0175em;
+}
+
+.card__delete-btn:hover {
+  opacity: 0.6;
+  transition: 0.3s;
+}
