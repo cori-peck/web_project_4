@@ -25,6 +25,7 @@
 @import url("../blocks/form/form.css");
 @import url("../blocks/form/__text-input/form__text-input.css");
 @import url("../blocks/form/__btn/form__btn.css");
+@import url("../blocks/form/__create/form__create.css");
 @import url("../blocks/cards/__list/cards__list.css");
 @import url("../blocks/card/card.css");
 @import url("../blocks/card/__delete-btn/card__delete-btn.css");

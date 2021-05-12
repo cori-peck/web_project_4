@@ -1,0 +1,25 @@
+.form__create {
+  background-color: #000;
+  color: #fff;
+  font-size: 1.125em;
+  line-height: 1.36em;
+  font-weight: 400;
+  width: 100%;
+  padding-top: 0.75em;
+  padding-bottom: 1.02em;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  margin-top: 1.5em;
+}
+
+.form__create:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .form__create {
+    width: 95%;
+  }
+}

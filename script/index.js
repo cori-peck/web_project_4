@@ -1,9 +1,15 @@
 const cardsContainer = document.querySelector(".cards__list");
+
 const popup = document.querySelector(".popup");
 const popupBtn = document.querySelector(".profile__edit-button");
+
 const addPopup = document.querySelector(".add-popup");
 const addBtn = document.querySelector(".profile__add-button");
+const createBtn = document.querySelector(".form__create");
 const closeAdd = document.querySelector(".add-popup__close-btn");
+const imgLink = document.querySelector(".card__image");
+const cardTitle = document.querySelector(".card__title");
+
 const form = document.querySelector(".form");
 const formBtn = document.querySelector(".popup__close-btn");
 let currentName = document.querySelector(".profile__name").textContent;
@@ -44,6 +50,11 @@ function displayCards(item) {
   cardElement.querySelector(".card__image").alt = item.name;
   cardElement.querySelector(".card__title").textContent = item.name;
 
+  const deleteBtn = cardElement.querySelector(".card__delete-btn");
+  deleteBtn.addEventListener("click", (event) =>
+    event.target.parentElement.remove()
+  );
+
   cardsContainer.append(cardElement);
 }
 
@@ -74,12 +85,32 @@ function openAddCard() {
   addPopup.classList.add("add-popup_status_opened");
 }
 
+/*function addNewCard(event) {
+  event.preventDefault();
+  let newPlace = document.querySelector("#title").value;
+  let newImgUrl = document.querySelector("#img-link").value;
+
+  let placeObj = { name: newPlace, link: newImgUrl };
+
+  initialCards.append(placeObj);
+  console.log(initialCards, "add card button firing");
+  displayCards();
+}*/
+
+function addNewObj() {
+  const newObj = displayCards();
+
+  cardsContainer.prepend(newObj);
+  console.log(cardsContainer, "add buttom is firing");
+}
+
 function closeAddCard() {
   addPopup.classList.remove("add-popup_status_opened");
 }
 
 popupBtn.addEventListener("click", openPopup);
 addBtn.addEventListener("click", openAddCard);
+createBtn.addEventListener("submit", addNewObj);
 closeAdd.addEventListener("click", closeAddCard);
 form.addEventListener("submit", updateText);
 formBtn.addEventListener("click", closePopup);
