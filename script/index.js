@@ -7,8 +7,8 @@ const addPopup = document.querySelector(".add-popup");
 const addBtn = document.querySelector(".profile__add-button");
 const createBtn = document.querySelector(".form__create");
 const closeAdd = document.querySelector(".add-popup__close-btn");
-const imgLink = document.querySelector(".card__image");
-const cardTitle = document.querySelector(".card__title");
+//const imgLink = document.querySelector(".card__image");
+//const cardTitle = document.querySelector(".card__title");
 
 const form = document.querySelector(".form");
 const formBtn = document.querySelector(".popup__close-btn");
@@ -42,7 +42,7 @@ const initialCards = [
   },
 ];
 
-function displayCards(item) {
+function createCards(item) {
   const cardTemplate = document.querySelector("#card-template").content;
   const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
 
@@ -55,10 +55,15 @@ function displayCards(item) {
     event.target.parentElement.remove()
   );
 
+  const likeBtn = cardElement.querySelector(".card__like-btn");
+  likeBtn.addEventListener("click", () =>
+    likeBtn.classList.toggle("card__like-btn_status_active")
+  );
+
   cardsContainer.append(cardElement);
 }
 
-Array.prototype.forEach.call(initialCards, displayCards);
+Array.prototype.forEach.call(initialCards, createCards);
 
 function openPopup() {
   document.querySelector("#fullName").value = currentName;
@@ -85,32 +90,12 @@ function openAddCard() {
   addPopup.classList.add("add-popup_status_opened");
 }
 
-/*function addNewCard(event) {
-  event.preventDefault();
-  let newPlace = document.querySelector("#title").value;
-  let newImgUrl = document.querySelector("#img-link").value;
-
-  let placeObj = { name: newPlace, link: newImgUrl };
-
-  initialCards.append(placeObj);
-  console.log(initialCards, "add card button firing");
-  displayCards();
-}*/
-
-function addNewObj() {
-  const newObj = displayCards();
-
-  cardsContainer.prepend(newObj);
-  console.log(cardsContainer, "add buttom is firing");
-}
-
 function closeAddCard() {
   addPopup.classList.remove("add-popup_status_opened");
 }
 
 popupBtn.addEventListener("click", openPopup);
 addBtn.addEventListener("click", openAddCard);
-createBtn.addEventListener("submit", addNewObj);
 closeAdd.addEventListener("click", closeAddCard);
 form.addEventListener("submit", updateText);
 formBtn.addEventListener("click", closePopup);
