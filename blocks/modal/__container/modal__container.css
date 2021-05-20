@@ -1,0 +1,17 @@
+.modal__container {
+  max-width: 75vw;
+  max-height: 75vh;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "closebuttonrow"
+    "contentrow";
+}
+
+.modal__container > [style^="--aspect-ratio"]::before {
+  content: "";
+  height: 1px;
+  width: 0;
+  padding-right: calc(100% / (var(--aspect-ratio)));
+}

@@ -1,0 +1,11 @@
+.modal__figure {
+  grid-area: contentrow;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1000px) {
+  .modal__figure {
+    margin: 0 auto;
+    padding-top: 0.5em;
+    grid-template-columns: minmax(15rem, 1fr) 1.375rem;
+  }
+}

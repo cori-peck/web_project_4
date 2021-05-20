@@ -9,6 +9,10 @@ const createBtn = document.querySelector(".form__create");
 const closeAdd = document.querySelector(".add-popup__close-btn");
 //const imgLink = document.querySelector(".card__image");
 //const cardTitle = document.querySelector(".card__title");
+const imgModal = document.querySelector(".modal");
+const modalClose = document.querySelector(".modal__close-btn");
+//const modalImg = imgModal.querySelector(".popup-image__image");
+//const modalImgTitle = imgModal.querySelector(".popup-image__title");
 
 const form = document.querySelector(".form");
 const formBtn = document.querySelector(".popup__close-btn");
@@ -60,6 +64,14 @@ function createCards(item) {
     likeBtn.classList.toggle("card__like-btn_status_active")
   );
 
+  const clickableImg = cardElement.querySelector(".card__image");
+  clickableImg.addEventListener("click", () => {
+    console.log("image clicked");
+    imgModal.querySelector(".modal__image").src = item.link;
+    imgModal.querySelector(".modal__title").textContent = item.name;
+    openImgModal();
+  });
+
   cardsContainer.append(cardElement);
 }
 
@@ -70,6 +82,10 @@ function openPopup() {
   document.querySelector("#job").value = currentJob;
 
   popup.classList.add("popup_status_opened");
+}
+
+function openImgModal() {
+  imgModal.classList.add("modal_status_open");
 }
 
 function updateText(event) {
@@ -86,6 +102,10 @@ function closePopup() {
   popup.classList.remove("popup_status_opened");
 }
 
+function closeImgModal() {
+  imgModal.classList.remove("modal_status_open");
+}
+
 function openAddCard() {
   addPopup.classList.add("add-popup_status_opened");
 }
@@ -99,3 +119,4 @@ addBtn.addEventListener("click", openAddCard);
 closeAdd.addEventListener("click", closeAddCard);
 form.addEventListener("submit", updateText);
 formBtn.addEventListener("click", closePopup);
+modalClose.addEventListener("click", closeImgModal);
