@@ -5,14 +5,11 @@ const popupBtn = document.querySelector(".profile__edit-button");
 
 const addPopup = document.querySelector(".add-popup");
 const addBtn = document.querySelector(".profile__add-button");
-const createBtn = document.querySelector(".form__create");
+const createForm = document.querySelector(".form__add");
 const closeAdd = document.querySelector(".add-popup__close-btn");
-//const imgLink = document.querySelector(".card__image");
-//const cardTitle = document.querySelector(".card__title");
+
 const imgModal = document.querySelector(".modal");
 const modalClose = document.querySelector(".modal__close-btn");
-//const modalImg = imgModal.querySelector(".popup-image__image");
-//const modalImgTitle = imgModal.querySelector(".popup-image__title");
 
 const form = document.querySelector(".form");
 const formBtn = document.querySelector(".popup__close-btn");
@@ -110,12 +107,27 @@ function openAddCard() {
   addPopup.classList.add("add-popup_status_opened");
 }
 
+function addPlace(event) {
+  event.preventDefault();
+  let newPlace = {
+    name: document.querySelector("#title").value,
+    link: document.querySelector("#img-link").value,
+  };
+
+  initialCards.unshift(newPlace);
+  console.log(initialCards, "create btn fired");
+  createCards(newPlace);
+  createForm.reset();
+  closeAddCard();
+}
+
 function closeAddCard() {
   addPopup.classList.remove("add-popup_status_opened");
 }
 
 popupBtn.addEventListener("click", openPopup);
 addBtn.addEventListener("click", openAddCard);
+createForm.addEventListener("submit", addPlace);
 closeAdd.addEventListener("click", closeAddCard);
 form.addEventListener("submit", updateText);
 formBtn.addEventListener("click", closePopup);
