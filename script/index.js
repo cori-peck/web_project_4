@@ -68,6 +68,7 @@ function createCards(item) {
   clickableImg.addEventListener("click", () => {
     console.log("image clicked");
     imgModal.querySelector(".modal__image").src = item.link;
+    imgModal.querySelector(".modal__image").alt = item.name;
     imgModal.querySelector(".modal__title").textContent = item.name;
     openImgModal();
   });
@@ -122,8 +123,25 @@ function addPlace(event) {
   cardElement.querySelector(".card__image").alt = newPlace.name;
   cardElement.querySelector(".card__title").textContent = newPlace.name;
 
+  const deleteBtn = cardElement.querySelector(".card__delete-btn");
+  deleteBtn.addEventListener("click", (event) =>
+    event.target.parentElement.remove()
+  );
+
+  const likeBtn = cardElement.querySelector(".card__like-btn");
+  likeBtn.addEventListener("click", () =>
+    likeBtn.classList.toggle("card__like-btn_status_active")
+  );
+
+  const clickableImg = cardElement.querySelector(".card__image");
+  clickableImg.addEventListener("click", () => {
+    imgModal.querySelector(".modal__image").src = newPlace.link;
+    imgModal.querySelector(".modal__image").alt = newPlace.name;
+    imgModal.querySelector(".modal__title").textContent = newPlace.name;
+    openImgModal();
+  });
+
   initialCards.unshift(newPlace);
-  console.log(initialCards, "create btn fired");
   cardsContainer.prepend(cardElement);
   createForm.reset();
   closeAddCard();
