@@ -43,6 +43,9 @@ const initialCards = [
   },
 ];
 
+const cardTemplate = document.querySelector("#card-template").content;
+const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
+
 function createCards(item) {
   const cardTemplate = document.querySelector("#card-template").content;
   const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
@@ -109,14 +112,19 @@ function openAddCard() {
 
 function addPlace(event) {
   event.preventDefault();
+
   let newPlace = {
     name: document.querySelector("#title").value,
     link: document.querySelector("#img-link").value,
   };
 
+  cardElement.querySelector(".card__image").src = newPlace.link;
+  cardElement.querySelector(".card__image").alt = newPlace.name;
+  cardElement.querySelector(".card__title").textContent = newPlace.name;
+
   initialCards.unshift(newPlace);
   console.log(initialCards, "create btn fired");
-  createCards(newPlace);
+  cardsContainer.prepend(cardElement);
   createForm.reset();
   closeAddCard();
 }
