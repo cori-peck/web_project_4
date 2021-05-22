@@ -5,7 +5,7 @@ const popupBtn = document.querySelector(".profile__edit-button");
 
 const addPopup = document.querySelector(".add-popup");
 const addBtn = document.querySelector(".profile__add-button");
-const createForm = document.querySelector(".form__add");
+const createForm = document.querySelector(".form--add");
 const closeAdd = document.querySelector(".add-popup__close-btn");
 
 const imgModal = document.querySelector(".modal");
