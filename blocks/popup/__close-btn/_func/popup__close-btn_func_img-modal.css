@@ -1,4 +1,4 @@
-.modal__close-btn {
+.popup__close-btn_func_img-modal {
   border: none;
   cursor: pointer;
   padding: 0;
@@ -6,18 +6,17 @@
   height: 2.5em;
   margin-top: -1.7rem;
   margin-left: -2.19rem;
-  background: url("../../../images/close-icon.svg") no-repeat center center;
   grid-area: closebuttonrow;
   grid-column: 3 / -1;
 }
 
-.modal__close-btn:hover {
+.popup__close-btn_func_img-modal:hover {
   opacity: 0.6;
   transition: 0.3s;
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
-  .modal__close-btn {
+  .popup__close-btn_func_img-modal {
     width: 1.667em;
     max-height: 1.667em;
     margin-left: -0.15rem;
@@ -25,7 +24,7 @@
 }
 
 @media screen and (min-width: 769px) and (max-width: 1000px) {
-  .modal__close-btn {
+  .popup__close-btn_func_img-modal {
     width: 2.18em;
     max-height: 2.18em;
     margin-left: -0.1rem;

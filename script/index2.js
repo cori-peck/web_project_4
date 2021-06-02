@@ -26,9 +26,10 @@ const initialCards = [
 ];
 
 const cardTemplate = document.querySelector("#card-template").content;
-
 const cardsContainer = document.querySelector(".cards__list");
+
 const tabTitle = document.querySelector(".card__title");
+
 const addTitle = document.querySelector("#title");
 const addImg = document.querySelector("#img-link");
 const addPopup = document.querySelector(".popup_func_add");
@@ -36,16 +37,35 @@ const addBtn = document.querySelector(".profile__add-button");
 const createForm = document.querySelector(".form_type_add");
 const closeAdd = document.querySelector(".popup__close-btn_func_add");
 
+const imgModal = document.querySelector(".popup_func_img-modal");
+const closeModal = document.querySelector(".popup__close-btn_func_img-modal");
+
 function createCard(item) {
   const cardTemplate = document
     .querySelector("#card-template")
     .content.querySelector(".card");
   const cardElement = cardTemplate.cloneNode(true);
-  const clickableImg = document.querySelector(".card__image");
 
   cardElement.querySelector(".card__image").src = item.link;
   cardElement.querySelector(".card__image").alt = item.name;
   cardElement.querySelector(".card__title").textContent = item.name;
+
+  const deleteBtn = cardElement.querySelector(".card__delete-btn");
+  deleteBtn.addEventListener("click", () => cardElement.remove());
+
+  const likeBtn = cardElement.querySelector(".card__like-btn");
+  likeBtn.addEventListener("click", () =>
+    likeBtn.classList.toggle("card__like-btn_status_active")
+  );
+
+  const clickableImg = cardElement.querySelector(".card__image");
+  clickableImg.addEventListener("click", () => {
+    console.log("image clicked");
+    imgModal.querySelector(".popup__image").src = item.link;
+    imgModal.querySelector(".popup__image").alt = item.name;
+    imgModal.querySelector(".popup__caption").textContent = item.name;
+    openPopup(imgModal);
+  });
 
   return cardElement;
 }
@@ -76,8 +96,14 @@ function addPlace(event) {
   newPlace.name = addTitle.value;
   newPlace.link = addImg.value;
 
-  cardsContainer.prepend(addPlace);
+  initialCards.unshift(newPlace);
+  cardsContainer.prepend(createCard(newPlace));
+  console.log("create submitted", initialCards);
+  createForm.reset();
+  closePopup(addPopup);
 }
 
 addBtn.addEventListener("click", () => openPopup(addPopup));
 closeAdd.addEventListener("click", () => closePopup(addPopup));
+createForm.addEventListener("submit", addPlace);
+closeModal.addEventListener("click", () => closePopup(imgModal));

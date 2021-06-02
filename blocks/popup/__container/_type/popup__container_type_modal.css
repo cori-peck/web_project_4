@@ -1,0 +1,13 @@
+.popup__container_type_modal {
+  max-width: 75vw;
+  max-height: 75vh;
+  box-sizing: border-box;
+  color: #fff;
+  background: none;
+  display: grid;
+  grid-template-areas:
+    "closebuttonrow"
+    "contentrow";
+  justify-content: center;
+  grid-template-columns: auto;
+}
