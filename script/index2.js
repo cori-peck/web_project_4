@@ -25,15 +25,21 @@ const initialCards = [
   },
 ];
 
+const currentName = document.querySelector(".profile__name").textContent;
+const currentJob = document.querySelector(".profile__occupation").textContent;
+
 const cardTemplate = document.querySelector("#card-template").content;
 const cardsContainer = document.querySelector(".cards__list");
 
-const tabTitle = document.querySelector(".card__title");
+const editPopup = document.querySelector(".popup_func_edit");
+const editForm = document.querySelector(".form_type_edit");
+const editBtn = document.querySelector(".profile__edit-button");
+const closeEdit = document.querySelector(".popup__close-btn_func_edit");
 
+const addBtn = document.querySelector(".profile__add-button");
 const addTitle = document.querySelector("#title");
 const addImg = document.querySelector("#img-link");
 const addPopup = document.querySelector(".popup_func_add");
-const addBtn = document.querySelector(".profile__add-button");
 const createForm = document.querySelector(".form_type_add");
 const closeAdd = document.querySelector(".popup__close-btn_func_add");
 
@@ -103,6 +109,28 @@ function addPlace(event) {
   closePopup(addPopup);
 }
 
+function getCurrentEdit() {
+  document.querySelector("#fullName").value = currentName;
+  document.querySelector("#job").value = currentJob;
+
+  openPopup(editPopup);
+}
+
+function updateText(event) {
+  event.preventDefault();
+
+  const newName = document.querySelector("#fullName").value;
+  const newJob = document.querySelector("#job").value;
+
+  document.querySelector(".profile__name").textContent = newName;
+  document.querySelector(".profile__occupation").textContent = newJob;
+  editForm.reset();
+  closePopup(editPopup);
+}
+
+editBtn.addEventListener("click", () => getCurrentEdit());
+editPopup.addEventListener("submit", updateText);
+closeEdit.addEventListener("click", () => closePopup(editPopup));
 addBtn.addEventListener("click", () => openPopup(addPopup));
 closeAdd.addEventListener("click", () => closePopup(addPopup));
 createForm.addEventListener("submit", addPlace);
