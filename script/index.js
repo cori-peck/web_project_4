@@ -53,9 +53,10 @@ function createCard(item) {
     .querySelector("#card-template")
     .content.querySelector(".card");
   const cardElement = cardTemplate.cloneNode(true);
+  const clickableImg = cardElement.querySelector(".card__image");
 
-  cardElement.querySelector(".card__image").src = item.link;
-  cardElement.querySelector(".card__image").alt = item.name;
+  clickableImg.src = item.link;
+  clickableImg.alt = item.name;
   cardElement.querySelector(".card__title").textContent = item.name;
 
   const deleteBtn = cardElement.querySelector(".card__delete-btn");
@@ -66,7 +67,6 @@ function createCard(item) {
     likeBtn.classList.toggle("card__like-btn_status_active")
   );
 
-  const clickableImg = cardElement.querySelector(".card__image");
   clickableImg.addEventListener("click", () => {
     console.log("image clicked");
     imgModal.querySelector(".popup__image").src = item.link;
@@ -104,9 +104,7 @@ function addPlace(event) {
   newPlace.name = addTitle.value;
   newPlace.link = addImg.value;
 
-  initialCards.unshift(newPlace);
   cardsContainer.prepend(createCard(newPlace));
-  console.log("create submitted", initialCards);
   createForm.reset();
   closePopup(addPopup);
 }
