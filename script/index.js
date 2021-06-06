@@ -27,6 +27,8 @@ const initialCards = [
 
 const currentName = document.querySelector(".profile__name").textContent;
 const currentJob = document.querySelector(".profile__occupation").textContent;
+const newName = document.querySelector("#fullName");
+const newJob = document.querySelector("#job");
 
 const cardTemplate = document.querySelector("#card-template").content;
 const cardsContainer = document.querySelector(".cards__list");
@@ -109,26 +111,18 @@ function addPlace(event) {
   closePopup(addPopup);
 }
 
-function getCurrentEdit() {
-  document.querySelector("#fullName").value = currentName;
-  document.querySelector("#job").value = currentJob;
-
-  openPopup(editPopup);
-}
+newName.value = currentName;
+newJob.value = currentJob;
 
 function updateText(event) {
   event.preventDefault();
 
-  const newName = document.querySelector("#fullName").value;
-  const newJob = document.querySelector("#job").value;
-
-  document.querySelector(".profile__name").textContent = newName;
-  document.querySelector(".profile__occupation").textContent = newJob;
-  editForm.reset();
+  document.querySelector(".profile__name").textContent = newName.value;
+  document.querySelector(".profile__occupation").textContent = newJob.value;
   closePopup(editPopup);
 }
 
-editBtn.addEventListener("click", () => getCurrentEdit());
+editBtn.addEventListener("click", () => openPopup(editPopup));
 editPopup.addEventListener("submit", updateText);
 closeEdit.addEventListener("click", () => closePopup(editPopup));
 addBtn.addEventListener("click", () => openPopup(addPopup));
